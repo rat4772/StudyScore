@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyScore | Student Performance Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">Study<span>Score</span></a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#analyzer">Analyzer</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR ACADEMIC COMPANION</p>
+                <h1>Understand your habits.<br>
+                    <span>Improve your performance.</span>
+                </h1>
+                <p class="hero-text">
+                    Explore your study habits and discover how your
+                    academic patterns relate to student performance.
+                </p>
+                <a href="#analyzer" class="primary-btn">
+                    Analyze My Habits →
+                </a>
+            </div>
+
+            <div class="hero-card">
+                <div class="mini-icon">✦</div>
+                <p class="muted">YOUR JOURNEY STARTS HERE</p>
+                <h2>Small steps.<br>Better habits.</h2>
+                <div class="progress-line">
+                    <div></div>
+                </div>
+                <p class="muted">Understand your learning patterns</p>
+            </div>
+        </section>
+
+        <section class="analyzer section" id="analyzer">
+            <div class="section-heading">
+                <p class="eyebrow">STUDENT ANALYZER</p>
+                <h2>Tell us about your study habits</h2>
+                <p>Enter your information to explore your academic profile.</p>
+            </div>
+
+            <div class="analyzer-grid">
+                <form id="studentForm" class="form-card">
+                    <h3>Student information</h3>
+                    <p class="muted">Fill in the details below.</p>
+
+                    <label for="studytime">Weekly study time</label>
+                    <select id="studytime" required>
+                        <option value="">Select study time</option>
+                        <option value="1">Less than 2 hours</option>
+                        <option value="2">2–5 hours</option>
+                        <option value="3">5–10 hours</option>
+                        <option value="4">More than 10 hours</option>
+                    </select>
+
+                    <label for="failures">Past class failures</label>
+                    <input type="number" id="failures"
+                        min="0" max="10" step="1" value="0" required>
+
+                    <label for="absences">Number of absences</label>
+                    <input type="number" id="absences"
+                        min="0" max="100" step="1" value="0" required>
+
+                    <label for="previousGrade">Previous academic grade (0–20)</label>
+                    <input type="number" id="previousGrade"
+                        min="0" max="20" step="0.1"
+                        placeholder="Enter your previous grade" required>
+
+                    <button type="submit" class="primary-btn full-btn">
+                        Analyze My Profile →
+                    </button>
+
+                    <p class="form-note">
+                        Demo only: results are illustrative, not ML predictions.
+                    </p>
+                </form>
+
+                <div class="result-card" id="result">
+                    <div class="result-icon">✧</div>
+                    <p class="eyebrow">YOUR ANALYSIS</p>
+                    <h3>Your results will appear here</h3>
+                    <p class="muted">
+                        Complete the form to see a sample analysis
+                        of your study habits.
+                    </p>
+                    <div class="result-divider"></div>
+                    <div class="result-row">
+                        <span>Study time</span>
+                        <strong>—</strong>
+                    </div>
+                    <div class="result-row">
+                        <span>Attendance pattern</span>
+                        <strong>—</strong>
+                    </div>
+                    <div class="result-row">
+                        <span>Academic profile</span>
+                        <strong>—</strong>
+                    </div>
+                    <p class="result-note">
+                        A trained model will replace these sample
+                        results in a later project phase.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">ABOUT STUDYSCORE</p>
+                <h2>Make learning more understandable.</h2>
+                <p>
+                    StudyScore is a student performance analysis project
+                    designed to explore the relationship between study
+                    habits and academic outcomes using Machine Learning.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span>01</span>
+                    <h3>Study habits</h3>
+                    <p>Explore how time spent studying relates to performance.</p>
+                </article>
+                <article class="feature-card">
+                    <span>02</span>
+                    <h3>Academic patterns</h3>
+                    <p>Examine attendance and previous academic results.</p>
+                </article>
+                <article class="feature-card">
+                    <span>03</span>
+                    <h3>ML-powered insights</h3>
+                    <p>Use a trained model to generate data-driven estimates.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#home" class="logo">Study<span>Score</span></a>
+        <p>Built to explore better learning through data.</p>
+        <p>© 2026 StudyScore · Student ML Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
