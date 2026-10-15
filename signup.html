@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | StudyScore</title>
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <header class="topbar">
+        <a href="index.html" class="logo">Study<span>Score</span></a>
+    </header>
+
+    <main class="auth-layout">
+        <section class="auth-card">
+            <p class="eyebrow">JOIN STUDYSCORE</p>
+            <h1>Create your account</h1>
+            <p class="subtitle">Start exploring your academic habits.</p>
+
+            <form id="signupForm">
+                <label for="name">Full name</label>
+                <input id="name" type="text" placeholder="Your full name" required>
+
+                <label for="email">Email address</label>
+                <input id="email" type="email" placeholder="you@example.com" required>
+
+                <label for="password">Password</label>
+                <input id="password" type="password"
+                    placeholder="At least 8 characters"
+                    minlength="8" required>
+
+                <label for="confirmPassword">Confirm password</label>
+                <input id="confirmPassword" type="password"
+                    placeholder="Enter your password again"
+                    minlength="8" required>
+
+                <button type="submit" class="primary-btn">Create account</button>
+                <p id="message" class="message" aria-live="polite"></p>
+            </form>
+
+            <a href="signin.html" class="text-link">Already have an account? Sign in</a>
+
+            <p class="fine-print">
+                Frontend demo only. Account registration is not yet connected
+                to a database.
+            </p>
+        </section>
+    </main>
+
+    <script src="pages.js"></script>
+</body>
+</html>

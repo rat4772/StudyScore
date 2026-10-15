@@ -1,0 +1,167 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+    --navy: #142b4a;
+    --blue: #3867d6;
+    --background: #f7f9fd;
+    --muted: #7b8799;
+    --border: #e5eaf2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.topbar {
+    min-height: 76px;
+    padding: 16px 8%;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font: 800 24px 'Manrope', sans-serif;
+    color: var(--navy);
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.text-link {
+    font-size: 14px;
+}
+
+.auth-layout {
+    min-height: calc(100vh - 76px);
+    padding: 45px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 36px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 15px 45px #142b4a0a;
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 12px 0;
+    font: 800 30px 'Manrope', sans-serif;
+}
+
+.subtitle,
+.fine-print {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+label {
+    display: block;
+    margin: 20px 0 7px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font: inherit;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px #3867d61a;
+}
+
+.primary-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background: var(--blue);
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    font: 600 14px 'DM Sans', sans-serif;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background: #2854bb;
+}
+
+.message {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.fine-print {
+    margin-top: 20px;
+    font-size: 11px;
+}
+
+@media (max-width: 500px) {
+    .topbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+    }
+
+    .auth-card {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+    .auth-footer {
+        margin-top: 24px;
+        text-align: center;
+        font-size: 14px;
+        color: var(--muted);
+    }
+
+    .back-home {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .auth-card a:hover {
+        text-decoration: underline;
+    }
+}
