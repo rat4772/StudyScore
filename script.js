@@ -97,3 +97,57 @@ form.addEventListener("submit", function (event) {
         block: "nearest"
     });
 });
+
+
+const progressForm = document.getElementById("progressForm");
+
+if (progressForm) {
+    progressForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const hours = Number(document.getElementById("hours").value);
+        const total = Number(document.getElementById("totalTopics").value);
+        const done = Number(document.getElementById("doneTopics").value);
+        const message = document.getElementById("progressMessage");
+
+        if (
+            hours < 0 || hours > 168 ||
+            total < 1 || !Number.isInteger(total) ||
+            done < 0 || !Number.isInteger(done) ||
+            done > total
+        ) {
+            message.textContent =
+                "Please enter valid values. Completed topics cannot exceed total topics.";
+            message.style.color = "#c0392b";
+            return;
+        }
+
+        const completed = (done / total) * 100;
+        const remaining = 100 - completed;
+
+        document.getElementById("studyHours").innerHTML =
+            `${hours} <span>hours</span>`;
+
+        document.getElementById("completedPercent").textContent =
+            `${completed.toFixed(1)}%`;
+
+        document.getElementById("remainingPercent").textContent =
+            `${remaining.toFixed(1)}%`;
+
+        document.getElementById("completedBar").style.width =
+            `${completed}%`;
+
+        document.getElementById("remainingBar").style.width =
+            `${remaining}%`;
+
+        document.getElementById("completedTopics").textContent =
+            `${done} of ${total} topics completed`;
+
+        document.getElementById("remainingTopics").textContent =
+            `${total - done} topics remaining`;
+
+        message.textContent = "Your study records have been updated.";
+        message.style.color = "#247a45";
+    });
+}
+
