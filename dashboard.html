@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Dashboard | StudyScore</title>
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <a href="index.html" class="logo">Study<span>Score</span></a>
+
+            <p class="menu-label">MENU</p>
+
+            <a href="dashboard.html" class="nav-item active">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="#study-hours" class="nav-item">
+                <span>◷</span> Study Hours
+            </a>
+
+            <a href="#syllabus-progress" class="nav-item">
+                <span>✓</span> Syllabus Progress
+            </a>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" class="nav-item">
+                    <span>←</span> Home
+                </a>
+
+                <a href="signin.html" class="nav-item">
+                    <span>↪</span> Sign In
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+                <div>
+                    <p class="eyebrow">YOUR LEARNING SPACE</p>
+                    <h1>Study Dashboard</h1>
+                    <p class="subtitle">
+                        Keep track of your study hours and syllabus progress.
+                    </p>
+                </div>
+            </header>
+
+            <section class="stats-grid">
+
+                <article class="stat-card" id="study-hours">
+                    <div class="stat-icon blue">◷</div>
+                    <p>Study Hours</p>
+                    <h2 id="studyHours">0 <span>hours</span></h2>
+                    <small>Total hours studied this week</small>
+                </article>
+
+                <article class="stat-card" id="syllabus-progress">
+                    <div class="stat-icon green">✓</div>
+                    <p>Syllabus Completed</p>
+                    <h2 id="completedPercent">0%</h2>
+                    <div class="progress-track">
+                        <div class="progress-fill" id="completedBar"></div>
+                    </div>
+                    <small id="completedTopics">0 of 0 topics completed</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon orange">▤</div>
+                    <p>Syllabus Remaining</p>
+                    <h2 id="remainingPercent">100%</h2>
+                    <div class="progress-track">
+                        <div class="progress-fill remaining-fill"
+                             id="remainingBar"></div>
+                    </div>
+                    <small id="remainingTopics">0 topics remaining</small>
+                </article>
+
+            </section>
+
+            <section class="content-card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Update Your Progress</h2>
+                        <p>Enter your current study records below.</p>
+                    </div>
+                </div>
+
+                <form id="progressForm">
+
+                    <div class="record-grid">
+                        <div class="form-group">
+                            <label for="hours">Study hours this week</label>
+                            <input
+                                type="number"
+                                id="hours"
+                                min="0"
+                                max="168"
+                                step="0.5"
+                                value="0"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="totalTopics">Total syllabus topics</label>
+                            <input
+                                type="number"
+                                id="totalTopics"
+                                min="1"
+                                step="1"
+                                value="10"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="doneTopics">Topics completed</label>
+                            <input
+                                type="number"
+                                id="doneTopics"
+                                min="0"
+                                step="1"
+                                value="0"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <p id="progressMessage" class="message" role="status"></p>
+
+                    <button type="submit" class="primary-btn">
+                        Update Records
+                    </button>
+
+                </form>
+            </section>
+
+            <p class="footer-note">
+                StudyScore · Track your progress, one day at a time.
+            </p>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
